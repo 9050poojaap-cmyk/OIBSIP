@@ -1,37 +1,62 @@
-# Smart ATM Management System
+# 🏧 Smart ATM Management System
 
-A professional **Java Swing desktop banking application** built with **Core Java 17**. Demonstrates OOP design, encapsulation, collections, exception handling, and clean separation between business logic and presentation — no frameworks, databases, or external libraries.
+A modern ATM Simulator built using **Core Java (Java 17)** and **Java Swing**.
 
----
-
-## Features
-
-| Module | Description |
-|--------|-------------|
-| **Authentication** | User ID + PIN login; 3 attempts; account lockout |
-| **Check Balance** | View current account balance |
-| **Deposit** | Add funds with validation and receipt |
-| **Withdraw** | Remove funds; daily limit Rs.25,000/day |
-| **Transfer** | Send money between users; prevents self-transfer |
-| **Transaction History** | Full scrollable history in JTable |
-| **Change PIN** | Verify old PIN; validate new 4-digit PIN |
-| **Receipt Generator** | Save transaction receipt as `.txt` |
-| **Logout** | Secure session end |
-
-### Demo Accounts
-
-| User ID | PIN  | Name          | Balance        |
-|---------|------|---------------|----------------|
-| U1001   | 1234 | Pooja Sharma  | Rs.25,000.00   |
-| U1002   | 5678 | Rahul Verma   | Rs.18,500.50   |
-| U1003   | 9012 | Ananya Patel  | Rs.32,000.75   |
+This project demonstrates Object-Oriented Programming (OOP) concepts, secure user authentication, transaction management, and desktop GUI development without using any external frameworks or libraries.
 
 ---
 
-## Project Structure
+## ✨ Features
 
-```
-ATM_Interface/
+### 🔐 Secure Authentication
+
+* User ID and PIN based login
+* Maximum 3 login attempts
+* Automatic account lock after repeated failed attempts
+
+### 💰 Banking Operations
+
+* Check Account Balance
+* Deposit Money
+* Withdraw Money
+* Transfer Money between accounts
+* Change PIN securely
+
+### 📜 Transaction Management
+
+* Complete transaction history
+* Timestamped transaction records
+* Transaction validation and error handling
+
+### 🧾 Receipt Generation
+
+* Automatic receipt generation after:
+
+  * Deposit
+  * Withdrawal
+  * Transfer
+
+### 🛡️ Security Features
+
+* Input validation
+* Self-transfer prevention
+* Invalid amount protection
+* Daily withdrawal limit enforcement
+
+### 🖥️ Modern GUI
+
+* Built using Java Swing
+* Banking-themed dashboard
+* User-friendly interface
+* Responsive desktop application
+
+---
+
+## 🏗️ Project Structure
+
+```text
+ATM_Interface
+│
 ├── Main.java
 ├── ATM.java
 ├── User.java
@@ -39,6 +64,7 @@ ATM_Interface/
 ├── AuthenticationManager.java
 ├── UIHelper.java
 ├── ReceiptGenerator.java
+│
 ├── LoginFrame.java
 ├── DashboardFrame.java
 ├── DepositFrame.java
@@ -46,40 +72,79 @@ ATM_Interface/
 ├── TransferFrame.java
 ├── HistoryFrame.java
 ├── ChangePinFrame.java
+│
 └── README.md
 ```
 
 ---
 
-## Architecture
+## 👨‍💻 Technologies Used
 
-```
-Main → LoginFrame → DashboardFrame → [Operation Frames]
-                         ↓
-                        ATM (service)
-                         ↓
-              AuthenticationManager / User / Transaction
-```
+* Java 17
+* Java Swing
+* Object-Oriented Programming (OOP)
+* Collections Framework
+* Exception Handling
+* Git & GitHub
 
 ---
 
-## How to Run
+## 🚀 How to Run
 
 ### Compile
 
-```powershell
-cd "c:\Users\Poojaa P\OneDrive\Documents\OIBSIP\ATM_Interface"
+```bash
 javac *.java
 ```
 
 ### Run
 
-```powershell
+```bash
 java Main
 ```
 
 ---
 
-## Author Notes
+## 👤 Demo Accounts
 
-Focused, interview-ready Core Java ATM application with essential banking features and a clean professional Swing interface.
+| User ID | PIN  | Account Holder |
+| ------- | ---- | -------------- |
+| U1001   | 1234 | Pooja Sharma   |
+| U1002   | 5678 | Rahul Verma    |
+| U1003   | 9012 | Aarav Patel    |
+
+---
+
+## 📌 Key Concepts Demonstrated
+
+* Encapsulation
+* Abstraction
+* Modular Design
+* GUI Development
+* Event Handling
+* Authentication Systems
+* Transaction Processing
+* Input Validation
+
+---
+
+## 🎯 Future Enhancements
+
+* Database Integration (MySQL)
+* Admin Dashboard
+* User Registration
+* Persistent Transaction Storage
+* Email Notifications
+* Account Statement Export
+
+---
+
+## 👩‍💻 Author
+
+**Poojaa P**
+
+IT Student | Sri Sairam Engineering College
+
+---
+
+⭐ Thank you for visiting this project repository.
