@@ -22,4 +22,4 @@ A Java Swing based number guessing game featuring adaptive difficulty, achieveme
 ## Author
 
 **Poojaa P**  
-IT Student | Sri Sairam Engineering College
+IT Student 
