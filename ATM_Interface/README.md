@@ -143,7 +143,7 @@ java Main
 
 **Poojaa P**
 
-IT Student | Sri Sairam Engineering College
+IT Student
 
 ---
 
