@@ -1,63 +1,144 @@
-# Smart Number Guessing Game
+# 🎯 Smart Number Guessing Game
 
-A professional Java Swing desktop application that delivers an advanced number guessing experience with statistics tracking, achievements, adaptive difficulty, and a modern gaming-style interface.
+A modern desktop-based Number Guessing Game built using **Core Java (Java 17)** and **Java Swing**.
 
-## Project Overview
+This project demonstrates Object-Oriented Programming (OOP), GUI development, game logic implementation, statistics tracking, achievement systems, and adaptive difficulty mechanisms without using external libraries or frameworks.
 
-Smart Number Guessing Game challenges players to guess a randomly generated number within a selected difficulty range. The application tracks performance across a session, rewards strategic play with a scoring system, offers limited hints, and adapts difficulty based on winning and losing streaks.
+---
 
-Built with core Java and object-oriented design principles, the project separates game logic from the user interface for maintainability and clarity.
+## ✨ Features
 
-## Features
+### 🎮 Multiple Difficulty Levels
 
-- **Player Profile** — Session-based player name with welcome messaging, current score, and personal best tracking
-- **Three Difficulty Levels** — Easy (1–50, 10 attempts), Medium (1–100, 7 attempts), Hard (1–200, 5 attempts)
-- **Scoring System** — Base points by difficulty with bonus for early wins; consecutive win rewards via streak-based play
-- **Hint System** — Up to 2 hints per game (even/odd, midpoint comparison, within-range clues)
-- **Session Statistics** — Games played/won/lost, win rate, highest score, average attempts, and win streaks
-- **Achievements** — Six unlockable badges including First Win, Lucky Guess, Perfect Predictor, and Legend
-- **Adaptive Difficulty** — Range and attempt adjustments based on consecutive wins or losses
-- **Modern Swing GUI** — Dark blue gaming theme with rounded buttons, hover effects, and readable typography
-- **Input Validation** — Error dialogs for empty, non-numeric, and out-of-range guesses
+Choose from three difficulty levels:
 
-## Technologies Used
+| Difficulty | Number Range | Attempts |
+|------------|-------------|-----------|
+| Easy | 1 - 50 | 10 |
+| Medium | 1 - 100 | 7 |
+| Hard | 1 - 200 | 5 |
 
-| Technology | Purpose |
-|------------|---------|
-| Java 17 | Core language |
-| Java Swing | Desktop GUI |
-| OOP Design | Modular architecture with separated concerns |
+---
 
-No database or external libraries are required.
+### 🏆 Scoring System
 
-## Project Structure
+- Score awarded based on difficulty level
+- Bonus points for winning quickly
+- Personal best score tracking
+- Session-based score management
 
+---
+
+### 💡 Smart Hint System
+
+Players can use hints during gameplay:
+
+- Even/Odd Hint
+- Midpoint Hint
+- Nearness Hint (within 10 or 20)
+
+Limited hints encourage strategic guessing.
+
+---
+
+### 📊 Statistics Dashboard
+
+Track your performance through detailed statistics:
+
+- Games Played
+- Games Won
+- Games Lost
+- Win Rate
+- Highest Score
+- Total Attempts
+- Average Attempts per Game
+- Current Win Streak
+- Best Win Streak
+
+---
+
+### 🏅 Achievement System
+
+Unlock special achievements while playing:
+
+- First Win
+- Lucky Guess
+- Perfect Predictor
+- Master Guesser
+- Winning Streak Achievements
+- High Score Achievements
+
+Achievements motivate players and make gameplay more engaging.
+
+---
+
+### 🤖 Adaptive Difficulty
+
+The game dynamically adjusts challenge levels based on player performance:
+
+#### Consecutive Wins
+- Number range increases
+- Available attempts decrease
+
+#### Consecutive Losses
+- Additional attempts may be granted
+
+This creates a more personalized gaming experience.
+
+---
+
+### 🖥️ Modern Java Swing GUI
+
+- Professional gaming-themed interface
+- Responsive layouts
+- Interactive buttons
+- Separate windows for:
+  - Dashboard
+  - Gameplay
+  - Statistics
+  - Achievements
+
+---
+
+## 🏗️ Project Structure
+
+```text
+Number_Guessing_Game
+│
+├── Main.java
+├── Player.java
+├── StatisticsManager.java
+├── AchievementManager.java
+├── GameEngine.java
+├── UIHelper.java
+│
+├── WelcomeFrame.java
+├── DashboardFrame.java
+├── GameFrame.java
+├── StatisticsFrame.java
+├── AchievementFrame.java
+│
+├── README.md
+└── .gitignore
 ```
-Number_Guessing_Game/
-├── Main.java                 # Application entry point
-├── GameEngine.java           # Game logic, scoring, hints, adaptive difficulty
-├── Player.java               # Player profile and score tracking
-├── StatisticsManager.java    # Session statistics
-├── AchievementManager.java   # Achievement definitions and unlock logic
-├── UIHelper.java             # Shared styling and UI components
-├── WelcomeFrame.java         # Player name entry screen
-├── DashboardFrame.java       # Main navigation hub
-├── GameFrame.java            # Gameplay screen
-├── StatisticsFrame.java      # Statistics display window
-├── AchievementFrame.java     # Achievement badges window
-└── README.md                 # Project documentation
-```
 
-## How To Run
+---
 
-### Prerequisites
+## 👨‍💻 Technologies Used
 
-- [JDK 17](https://adoptium.net/) or later installed
-- `java` and `javac` available in your system PATH
+- Java 17
+- Java Swing
+- Object-Oriented Programming (OOP)
+- Collections Framework
+- Exception Handling
+- Event Handling
+- Git & GitHub
+
+---
+
+## 🚀 How to Run
 
 ### Compile
-
-Open a terminal in the project directory and run:
 
 ```bash
 javac *.java
@@ -69,51 +150,53 @@ javac *.java
 java Main
 ```
 
-### Quick Start
+---
 
-1. Enter your player name on the welcome screen and click **Start Game**
-2. Use the dashboard to start a new game, view statistics, or check achievements
-3. Select a difficulty, click **Begin Round**, and submit guesses
-4. Use hints sparingly (maximum 2 per game)
-5. After each round, choose **Play Again** or **Return to Dashboard**
+## 🎯 Gameplay Flow
 
-## Scoring Reference
+1. Enter Player Name
+2. Select Difficulty Level
+3. Start a New Round
+4. Guess the Number
+5. Use Hints Strategically
+6. Earn Points and Unlock Achievements
+7. View Statistics and Track Progress
 
-| Outcome | Points |
-|---------|--------|
-| Easy Win | +100 |
-| Medium Win | +150 |
-| Hard Win | +200 |
-| Win within first 2 attempts | +50 bonus |
+---
 
-## Achievements
+## 📌 Key Concepts Demonstrated
 
-| Achievement | Unlock Condition |
-|-------------|------------------|
-| First Win | Win your first game |
-| Lucky Guess | Win within the first 2 attempts |
-| Perfect Predictor | Guess correctly on the first attempt |
-| Master Guesser | Win 5 total games |
-| Unstoppable | Win 3 consecutive games |
-| Legend | Reach a total score above 1000 |
+- Encapsulation
+- Abstraction
+- Modular Design
+- GUI Development
+- Event Handling
+- Session Management
+- Game Logic Design
+- Statistics Tracking
+- Achievement Systems
+- Adaptive Difficulty
 
-## Adaptive Difficulty
+---
 
-- **3 consecutive wins** — Range increases by 25; attempts decrease by 1
-- **2 consecutive losses** — Attempts increase by 1
+## 🚀 Future Enhancements
 
-Adaptive changes are applied when starting a new round and displayed in the game feedback area.
+- Persistent Score Storage
+- Leaderboard System
+- Multiplayer Mode
+- Sound Effects
+- Dark/Light Theme Switching
+- Database Integration
+- Online Ranking System
 
-## Future Enhancements
+---
 
-- Persistent storage for player profiles and statistics across sessions
-- Leaderboard with top scores
-- Sound effects and animations for wins and achievements
-- Timed challenge mode
-- Multiplayer or turn-based competitive mode
-- Additional difficulty presets and custom range configuration
-- Dark/light theme toggle
+## 👩‍💻 Author
 
-## License
+**Poojaa P**
 
-This project is provided for educational and portfolio use.
+IT Student | Sri Sairam Engineering College
+
+---
+
+⭐ Thank you for visiting this project repository.
